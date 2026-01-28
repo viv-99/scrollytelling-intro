@@ -13,6 +13,14 @@ html, body {
 
 /* Globale Einstellung Container */
 .noscrolly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   z-index: 10;
   padding: 0 20px;
@@ -57,12 +65,17 @@ html, body {
   max-width: none; /* Beschränkung aufgehoben */
 }
 
+/* Erzeugt Abstand nach der Landingpage zur ersten Textbox */
+.step:first-of-type {
+  margin-top: 100vh; /* Erhöhen für mehr Abstand (z. B. 100vh = 1 ganze Bildschirmhöhe) */
+}
+
 /* Einstellung Text Boxen bei scroll*/
 .step p {
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   font-family: 'Hanken Grotesk';
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
   padding: 30px 30px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -90,18 +103,19 @@ body {
 /*TITEL*/
 h1 {
   margin: 0; /* Verhindert Lücke oben */
-  color: #622B9B; /* Textfarbe Weiss */
-  font-family: "Hanken Grotesk", sans-serif; /* Schriftart */
-  font-size: 42px; /* Schriftgröße */
-  font-style: normal; /* Normaler Stil (kein Kursiv) */
-  font-weight: 800; /* Fettschrift */
-  line-height: 40px; /* Standard-Zeilenhöhe */
-  text-align: left; /* Zentriert über Video */
+  color: #622B9B; /* Zurück auf Weiss, damit es auf dem Video lesbar ist */
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  text-align: left; /* Zentriert */
 }
 
 /*Lead*/
 .lead {
   margin: 10px 0 0 0;
-  color: #622B9B;
+  color: #622B9B; /* Zurück auf Weiss */
   font-family: "Hanken Grotesk";
+  text-align: left; /* Zentriert */
 }
