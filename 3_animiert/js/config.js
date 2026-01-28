@@ -19,6 +19,7 @@ function sketch(p) {      // Konfiguration:
 		p.clear()
 		p.background("rgba(0,0,0,0.2)") // Den grauen Hintergrund zeichnen
 		p.ellipse(position, position, 20, 20) // Weissen Kreis darauf
+		p.ellipse(position, position, 10, 10) // Weissen Kreis darauf
 		p.text(number, position-3, position+4) // Text mit der Nummer des aktuellen Steps
 	}
   };

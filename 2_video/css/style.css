@@ -1,50 +1,118 @@
-.noscrolly {
-  padding: 0;
-  max-width: 60rem;
-  margin: 0 auto;
+* {
+  box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #622B9B; 
+}
+
+/* Globale Einstellung Container */
+.noscrolly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Titel exakt in der Mitte des Videos */
+  z-index: 10;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+/* Einstellung Artikel */
 .article {
   position: relative;
   padding: 0;
-  max-width: 20rem;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none; /* Beschränkung aufgehoben */
+  margin: 0;
 }
 
+/* Einstellung Sticky Elemente zb Bild und Video */
 .figure {
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
   display: flex;
   left: 0;
   margin: 0;
+  padding: 0;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   z-index: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100dvh;
+  background-color: #622B9B;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Container der Text Boxen */
 .step {
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   padding: 0;
   height: 100vh;
+  width: 100%;
+  max-width: none; /* Beschränkung aufgehoben */
 }
 
-.step p {
+/* Einstellung Text Boxen bei scroll*/
+.step p { 
   text-align: center;
   font-size: 18px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Hanken Grotesk';
   text-align: center;
-  margin: 0;
-  padding: 10px 18px;
-  background-color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto;
+  padding: 30px 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 80%;
+  color:  #622B9B;
 }
 
 .sticky-img {
-  margin: 0 auto;
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: scale-down;
-  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  height: 100dvh;
+  object-fit: cover; /* Nutzt die Fläche perfekt aus */
+  object-position: center;
+  display: block;
+  
+}
+
+/*Hintergrund*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #622B9B; 
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+/*TITEL*/
+h1 {
+  margin: 0; /* Verhindert Lücke oben */
+  color: #622B9B; /* Textfarbe Weiss */
+  font-family: "Hanken Grotesk", sans-serif; /* Schriftart */
+  font-size: 42px; /* Schriftgröße */
+  font-style: normal; /* Normaler Stil (kein Kursiv) */
+  font-weight: 800; /* Fettschrift */
+  line-height: 40px; /* Standard-Zeilenhöhe */
+  text-align: left; /* Zentriert über Video */
+}
+
+/*Lead*/
+.lead { 
+  margin: 10px 0 0 0;
+  color: #622B9B;
+  font-family: "Hanken Grotesk";
 }
